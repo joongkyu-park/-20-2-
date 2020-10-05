@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head><title>화씨온도 계산기</title>
+</head>
+<body>
+<h3>화씨온도 계산기</h3>
+<br>
+<script>
+    var celsius = prompt("섭씨온도를 입력하세요.");
+    if (celsius == null) {
+            // 취소 버튼이나 다이얼로그를 닫은 경우
+            alert("섭씨온도를 입력하지 않았습니다.");
+        }
+        else if (celsius == "") {
+            // 문자열 입력 없이 확인 버튼 누른 경우
+            alert("섭씨온도를 입력하지 않았습니다.");
+        }
+        else {
+            // ret에는 사용자가 입력한 문자열
+            var fahrenheit = celsius*180/100+32;
+        }
+        document.write(fahrenheit);
+        document.write(" ℉입니다.");
+</script>
+</body>
+</html>

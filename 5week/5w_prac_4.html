@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function Plus(){
+            if(parseInt(document.getElementById('input'
+            ).value) == 60){
+                alert("정답!");
+            }
+            else{
+                alert("오답!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>덧셈 계산 하시고, 결과를 입력하고 확인 버튼을 클릭하여 정확한지 확인해 보세요.</h2>
+    <hr>
+    20+40=<br>
+    덧셈결과: <input type="text" id="input">
+    <button type="button" onclick="Plus()">결과 확인</button>
+</body>
+</html>

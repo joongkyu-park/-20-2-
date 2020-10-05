@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <h2>오전이면 lightskyblue, </h2>
+    <h2>오후이면 orange 배경</h2>
+    <hr>
+    <div id='clock'></div>
+    <script>
+        function setClock(){
+            var time = new Date();
+            var h = time.getHours();
+            var m = time.getMinutes();
+            var s = time.getSeconds();
+            document.getElementById('clock').innerHTML =("현재 시간 : " + h +"시 "+ m + "분 "+ s + "초");
+            setTimeout('setClock()', 1000);
+            if(h>=12 && m>=00 && s>=00){
+                document.body.style.background = 'orange';
+            }
+            else{
+                document.body.style.background = 'lightskyblue';
+            }
+        }
+       setClock();
+        
+    </script>
+</body>
+</html>

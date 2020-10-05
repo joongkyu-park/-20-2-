@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>4주차 퀴즈</title>
+</head>
+
+<body>
+    <script>
+        function sum(num){
+            var result = 0;
+            for(var i =1;i<=num;i++){
+                result += i;
+            }
+            return result;
+        }
+    </script>
+    <script>
+        var num = prompt("100미만의 정수만 입력 : ");
+        if (num>100){
+            alert("정수 "+num+"은 100보다 작지 않습니다.")
+        }
+        else if (num==null || num == ""){
+            alert("정수를 입력하지 않았습니다.")
+        }
+        else if (num<1){
+            alert("1보다 크고 100보다 작은 양의 정수를 입력해주세요.")
+        }
+        else{
+            alert(sum(num));
+        }
+    </script>
+        
+</body>
+
+</html>

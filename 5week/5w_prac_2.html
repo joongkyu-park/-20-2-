@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        var rand = Math.floor(Math.random()*100+1);
+        var count = 0;
+        var flag = 0;
+
+        function NumberGame(user){
+            if (user == rand){
+                count++;
+                flag =1;
+                alert(count+"회만에 맞추었습니다. 정답 : "+rand)
+            }
+            else{
+                count++;
+                if (rand>user){
+                    document.getElementById('count').value = count;
+                    document.getElementById('hint').value = "입력보다 높습니다.";
+                }
+                else{
+                    document.getElementById('count').value = count;
+                    document.getElementById('hint').value = "입력보다 낮습니다.";
+                }
+            }
+        }        
+    </script>
+</head>
+<body>
+    <h2>숫자 맞추기 게임</h2>
+    <h4>이 게임은 컴퓨터가 생성한 숫자를 맞추는 게임입니다. 숫자는 1부터 100사이에 있습니다.</h5>
+    <label for="number">숫자: <input type="text" id="number"></label>
+    <button type="button" onclick="NumberGame(document.getElementById('number').value)">확인</button>
+    <br>
+    <label for="count">추측횟수: <input type="text" id="count"></label>
+    <label for="hint">힌트: <input type="text" id="hint"></label>
+    
+</body>
+</html>

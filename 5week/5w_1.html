@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+        function Point(xpos, ypos) {
+            this.x = xpos;
+            this.y = ypos;
+        }
+        Point.prototype.getDistance = function () {
+            return Math.sqrt(this.x * this.x + this.y * this.y);
+        }
+        Point.prototype.height = 10;
+        Point.prototype.width = 5;
+        var p1 = new Point(10, 20);
+        var d1 = p1.getDistance();
+        var s1 = p1.height * p1.width;
+        var p2 = new Point(10, 30);
+        var d2 = p2.getDistance();
+        var s2 = p2.height * p2.width;
+        document.writeln(d1 + "<br />");
+        document.writeln(s1 + "<br />");
+        document.writeln(d2 + "<br />");
+        document.writeln(s2 + "<br />");
+
+    </script>
+</body>
+</html>
