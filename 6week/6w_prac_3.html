@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function Answer1(){
+            document.getElementById("here1").innerHTML= "백설공주";
+        }
+        function Answer2(){
+            document.getElementById("here2").innerHTML= "둘 다";
+        }
+    </script>
+</head>
+
+<body>
+    <h2>정답의 동적 삽입</h2>
+    <hr>
+    Q. 거울아 거울아 세상에서 누가 제일 예쁘니?<br><br>
+    <input type="button" value="답보기" onclick="Answer1()"><br><br>
+    <div class="answer" id="here1"></div>
+    <br>
+    Q. 죽느냐 사느냐 어떤 것이 문제인가?<br><br>
+    <input type="button" value="답보기" onclick="Answer2()"><br><br>
+    <div class="answer" id="here2"></div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function showAndHide(){
+            var a = document.getElementsByClassName('answer');
+
+            if(a[0].style.visibility=="hidden"){
+                for(var i =0; i<3; i++){
+                    a[i].style.visibility="visible";
+                }
+            }
+            else{
+             for(var i =0; i<3; i++){
+                 a[i].style.visibility="hidden";
+             }
+            }
+        }
+    </script>
+    <style>
+        .answer{
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style=display:inline>다음 빈 곳에 숨은 단어?</h2>
+    <input type="button" value="show/hide" onclick="showAndHide()">
+    <br>
+    <hr>
+    <ul>
+        <li>I (<span class="answer" style="color:blue">love</span>) you.</li>
+        <li>CSS is Cascading (<span class="answer" style="color:blue">Style</span>) Sheet.</li>
+        <li>응답하라 (<span class="answer" style="color:blue">1998</span>).</li>
+    </ul>
+</body>
+
+</html>
