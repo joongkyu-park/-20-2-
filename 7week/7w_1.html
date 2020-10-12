@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function Cal(){
+             var result = 0;
+             var boxes = document.getElementsByClassName("box");
+             for(var i=0;boxes.length;i++){
+                 if(boxes[i].checked){
+                     result += parseInt(boxes[i].value);
+                 }
+             document.getElementById("result").value = result.toString();
+             }
+        }
+    </script>
+</head>
+
+<body>
+   <h2>물품을 선택하면 금액이 자동 계산됩니다.</h2>
+   <hr>
+   <input class="box" type="checkbox" onclick="Cal()" value="10000">모자 1만원 
+   <input class="box" type="checkbox" onclick="Cal()" value="30000">구두 3만원 
+   <input class="box" type="checkbox" onclick="Cal()" value="80000">명품가방 8만원
+   <br>
+   지불하실 금액<input type="text" value="0" id="result"> 
+
+   
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <script>
+       function Fruits(x){
+           if (x == "banana"){
+                document.getElementById("picture").src = "https://upload.wikimedia.org/wikipedia/commons/9/9b/Cavendish_Banana_DS.jpg"
+           }
+           else if(x == "mango"){
+            document.getElementById("picture").src = "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F9980A0335A22D4680B"
+
+           }
+           else if(x=="apple"){
+            document.getElementById("picture").src = "https://lh3.googleusercontent.com/proxy/VtB5-FsXTZeVb91eXeCcgwMMhNp7zRnWt-g2KCRcP7T9IsuXRUCM03lI0aaJqG9mWV0zq0tfj_SBl8AmvsVQiuTjn4C4KTpJV_3DJGRHPj88MdpVe9GItUNkMy0md_mHMyMhdVmVYv7jWirOqsrVY2mCczrLP0882EHHSb49a53H6OF6yt1XQMRdFxwoeuHkLVgR-_o1YwbucAXlgDGA7JfiBOgkFacRVLjC6D5rvKfJg89qJwEFhxNqiY6UTpRAsdq0BXw6bIJTYrXoEMHsFiXVmlx-XGa6Wot0gfF76d-swYJcxW88J53atNE"
+
+           }
+       }
+   </script>
+</head>
+
+<body>
+   <h2>select 객체에서 선택한 과일 출력</h2>
+   <hr>
+   과일을 선택하면 이미지가 출력됩니다.
+   <div>
+   <select id="fruits" onchange="Fruits(this.options[this.selectedIndex].value)">
+       <option value="banana" selected>바나나</option>
+       <option value="mango">망고</option>
+       <option value="apple">사과</option>
+   </select>
+   <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Cavendish_Banana_DS.jpg" id="picture" width="300" height="300">
+</div>
+
+</body>
+
+</html>
